@@ -1,3 +1,1 @@
 # California house pricing prediction
-
-
