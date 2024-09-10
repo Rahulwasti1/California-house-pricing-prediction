@@ -6,7 +6,7 @@ import pandas as pd
 
 app = Flask(__name__)  # Starting point of the application
 
-# Load the model
+# Loading the model
 regmodel = pickle.load(open("regmodel.pkl", 'rb'))
 scaler = pickle.load(open("scaler.pkl", 'rb'))
 
@@ -31,7 +31,6 @@ def predict():
     print(final_input)
     output = regmodel.predict(final_input)[0]
     return render_template("home.html", prediction_text="The House price prediction is {}". format(output))
-
 
 
 if __name__ == "__main__":
